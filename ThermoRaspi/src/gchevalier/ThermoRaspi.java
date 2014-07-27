@@ -5,6 +5,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -49,6 +50,11 @@ public class ThermoRaspi extends JPanel{
 		c.weighty = 1;
 		c.insets = new Insets(0,0,0,0);
 		this.add(plusButton,c);
+		plusButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				plusButton_Action(e);
+			}			
+		});
 		
 		c = new GridBagConstraints();
 		c.gridx = 1;
@@ -59,17 +65,28 @@ public class ThermoRaspi extends JPanel{
 		c.weighty = 1;
 		c.insets = new Insets(0,0,0,0);
 		this.add(minusButton,c);
+		minusButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				minusButton_Action(e);
+			}			
+		});
 		
 //		this.setMinimumSize(new Dimension());
+		this.parent.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+		this.parent.setUndecorated(true);
 		this.parent.pack();
 		this.parent.setVisible(true);
 	}
 	
 	private void plusButton_Action(ActionEvent evt){
-		
+		close();
 	}
 	private void minusButton_Action(ActionEvent evt){
 		
+	}
+	
+	private void close(){
+		System.exit(0);
 	}
 	
 	public static void main (String[] args){
