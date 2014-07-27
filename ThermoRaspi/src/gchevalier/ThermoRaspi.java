@@ -1,6 +1,8 @@
 package gchevalier;
 
 import java.awt.Font;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -75,6 +77,14 @@ public class ThermoRaspi extends JPanel{
 		this.parent.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		this.parent.setUndecorated(true);
 		this.parent.pack();
+		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		GraphicsDevice myDevice = ge.getDefaultScreenDevice();
+		try {
+		    myDevice.setFullScreenWindow(this.parent);
+		} finally {
+		    myDevice.setFullScreenWindow(null);
+		}
+
 		this.parent.setVisible(true);
 	}
 	
