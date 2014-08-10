@@ -65,7 +65,7 @@ public class ThermoWindow extends JFrame {
 		panelCurrentTemp.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JLabel lblCurrentTemp = new JLabel("20");
-		lblCurrentTemp.setFont(new Font("Helvetica Neue", Font.PLAIN, 500));
+		lblCurrentTemp.setFont(new Font("Helvetica Neue", Font.PLAIN, 400));
 		panelCurrentTemp.add(lblCurrentTemp);
 		
 		JLabel lblNewLabel = new JLabel("<html><sup>°C</sup></html>");
@@ -94,7 +94,7 @@ public class ThermoWindow extends JFrame {
 			}
 		});
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-		gbc_btnNewButton.ipady = 20;
+		gbc_btnNewButton.ipady = 50;
 		gbc_btnNewButton.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnNewButton.insets = new Insets(0, 0, 5, 0);
 		gbc_btnNewButton.gridx = 0;
@@ -104,7 +104,7 @@ public class ThermoWindow extends JFrame {
 		JButton btnHumidity = new JButton("Humidity");
 		GridBagConstraints gbc_btnHumidity = new GridBagConstraints();
 		gbc_btnHumidity.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnHumidity.ipady = 20;
+		gbc_btnHumidity.ipady = 50;
 		gbc_btnHumidity.gridx = 0;
 		gbc_btnHumidity.gridy = 1;
 		panel.add(btnHumidity, gbc_btnHumidity);
@@ -130,7 +130,7 @@ public class ThermoWindow extends JFrame {
 			}
 		});
 		GridBagConstraints gbc_button = new GridBagConstraints();
-		gbc_button.ipady = 20;
+		gbc_button.ipady = 50;
 		gbc_button.fill = GridBagConstraints.HORIZONTAL;
 		gbc_button.insets = new Insets(0, 0, 5, 0);
 		gbc_button.gridx = 0;
@@ -139,7 +139,7 @@ public class ThermoWindow extends JFrame {
 		
 		JButton button_1 = new JButton("-");
 		GridBagConstraints gbc_button_1 = new GridBagConstraints();
-		gbc_button_1.ipady = 20;
+		gbc_button_1.ipady = 50;
 		gbc_button_1.fill = GridBagConstraints.HORIZONTAL;
 		gbc_button_1.gridx = 0;
 		gbc_button_1.gridy = 1;
