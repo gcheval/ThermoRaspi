@@ -41,6 +41,11 @@ public class ThermoRaspi{
 	private void minusButton_Action(ActionEvent evt){
 		
 	}
+
+	
+	public static void main (String[] args){
+		new ThermoRaspi();
+	}
 	
 
 }
