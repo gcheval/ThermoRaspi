@@ -35,12 +35,6 @@ public class ThermoRaspi{
 			}
 		});
 	}
-	
-	private void plusButton_Action(ActionEvent evt){
-	}
-	private void minusButton_Action(ActionEvent evt){
-		
-	}
 
 	
 	public static void main (String[] args){
