@@ -60,9 +60,8 @@ public class Controller {
 	           // read the output from the command
 	           System.out.println("Here is the standard output of the command:\n");
 	           while ((s = stdInput.readLine()) != null) {
-	               System.out.println(s.substring(5, 8));
-	               System.out.println(s.substring(22, 25));
-	               
+	        	   tempLabel.setText(s.substring(5, 9));
+	        	   humidLabel.setText(s.substring(22, 26));               
 	           }
 	            
 	       }
