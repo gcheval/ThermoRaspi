@@ -97,13 +97,13 @@ public class ThermoWindow extends JFrame {
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
 		gbc_btnNewButton.ipady = 50;
 		gbc_btnNewButton.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnNewButton.insets = new Insets(30, 0, 5, 0);
+		gbc_btnNewButton.insets = new Insets(30, 0, 60, 0);
 		gbc_btnNewButton.gridx = 0;
 		gbc_btnNewButton.gridy = 0;
 		panelControls.add(btnNewButton, gbc_btnNewButton);
 
 		JLabel lblRelativeHumidityTitle = new JLabel("Relative Humidity");
-		lblRelativeHumidityTitle.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
+		lblRelativeHumidityTitle.setFont(new Font("Helvetica Neue", Font.PLAIN, 26));
 		GridBagConstraints gbc_lblRelativeHumidityTitle = new GridBagConstraints();
 		gbc_lblRelativeHumidityTitle.insets = new Insets(0, 0, 5, 0);
 		gbc_lblRelativeHumidityTitle.gridx = 0;
@@ -111,7 +111,7 @@ public class ThermoWindow extends JFrame {
 		panelControls.add(lblRelativeHumidityTitle, gbc_lblRelativeHumidityTitle);
 
 
-		lblRelativeHumidity.setFont(new Font("Helvetica Neue", Font.PLAIN, 40));
+		lblRelativeHumidity.setFont(new Font("Helvetica Neue", Font.PLAIN, 60));
 		GridBagConstraints gbc_lblRelativeHumidity = new GridBagConstraints();
 		gbc_lblRelativeHumidity.gridx = 0;
 		gbc_lblRelativeHumidity.gridy = 2;
@@ -186,7 +186,7 @@ public class ThermoWindow extends JFrame {
 		JLabel lblObjectiveTempTitle = new JLabel("Objectif");
 		GridBagConstraints gbc_lblObjectiveTempTitle = new GridBagConstraints();
 		gbc_lblObjectiveTempTitle.gridwidth = 2;
-		gbc_lblObjectiveTempTitle.insets = new Insets(0, 0, 0, 0);
+		gbc_lblObjectiveTempTitle.insets = new Insets(0, 70, 0, 0);
 		gbc_lblObjectiveTempTitle.gridx = 0;
 		gbc_lblObjectiveTempTitle.gridy = 0;
 		panel_1.add(lblObjectiveTempTitle, gbc_lblObjectiveTempTitle);
@@ -196,12 +196,12 @@ public class ThermoWindow extends JFrame {
 
 		GridBagConstraints gbc_label = new GridBagConstraints();
 		gbc_label.anchor = GridBagConstraints.NORTHWEST;
-		gbc_label.insets = new Insets(0, 0, 0, 0);
+		gbc_label.insets = new Insets(0, 100, 0, 0);
 		gbc_label.gridx = 0;
 		gbc_label.gridy = 1;
 		panel_1.add(lblObjectiveTemp, gbc_label);
 		lblObjectiveTemp.setVerticalAlignment(SwingConstants.BOTTOM);
-		lblObjectiveTemp.setFont(new Font("Helvetica Neue", Font.PLAIN, 99));
+		lblObjectiveTemp.setFont(new Font("Helvetica Neue", Font.PLAIN, 60));
 
 		JLabel lblObjCelciusTitle = new JLabel("<html><sup>°C</sup></html>");
 		GridBagConstraints gbc_lblObjCelciusTitle = new GridBagConstraints();

@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
+import javax.swing.UIManager;
 
 public class ThermoRaspi{
 	private static final long serialVersionUID = 1L;
@@ -28,6 +29,7 @@ public class ThermoRaspi{
 					ThermoWindow frame = new ThermoWindow();
 					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 					frame.setUndecorated(true);
+					UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
