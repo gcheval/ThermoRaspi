@@ -35,7 +35,6 @@ public class ThermoWindow extends JFrame {
 	 */
 	public ThermoWindow(){
 		controller = new Controller();
-		setAlwaysOnTop(true);
 		initWindow();
 	}
 
