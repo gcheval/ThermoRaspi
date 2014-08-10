@@ -48,7 +48,7 @@ public class Controller {
 	           // using the Runtime exec method:
 	           Process p = Runtime.getRuntime().exec("sudo python AdafruitDHT.py 11 4", 
 	        		   null,
-	        		   new File("/home/pi/workspace/AdafruitDHT_Python_DHT/examples/"));
+	        		   new File("/home/pi/workspace/Adafruit_Python_DHT/examples/"));
 	           
 	            
 	           BufferedReader stdInput = new BufferedReader(new
