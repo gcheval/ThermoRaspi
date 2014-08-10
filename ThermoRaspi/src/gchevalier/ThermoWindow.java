@@ -64,7 +64,7 @@ public class ThermoWindow extends JFrame {
 		panelCurrentTemp.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 
 
-		lblCurrentTemp.setFont(new Font("Helvetica Neue", Font.PLAIN, 400));	//Set to 400
+		lblCurrentTemp.setFont(new Font("Helvetica Neue", Font.PLAIN, 350));	//Set to 400
 		panelCurrentTemp.add(lblCurrentTemp);
 
 		JLabel lblNewLabel = new JLabel("<html><sup>°C</sup></html>");
@@ -184,7 +184,7 @@ public class ThermoWindow extends JFrame {
 		JLabel lblObjectiveTempTitle = new JLabel("Objectif");
 		GridBagConstraints gbc_lblObjectiveTempTitle = new GridBagConstraints();
 		gbc_lblObjectiveTempTitle.gridwidth = 2;
-		gbc_lblObjectiveTempTitle.insets = new Insets(0, 0, 0, 5);
+		gbc_lblObjectiveTempTitle.insets = new Insets(0, 0, 0, 0);
 		gbc_lblObjectiveTempTitle.gridx = 0;
 		gbc_lblObjectiveTempTitle.gridy = 0;
 		panel_1.add(lblObjectiveTempTitle, gbc_lblObjectiveTempTitle);
@@ -194,7 +194,7 @@ public class ThermoWindow extends JFrame {
 
 		GridBagConstraints gbc_label = new GridBagConstraints();
 		gbc_label.anchor = GridBagConstraints.NORTHWEST;
-		gbc_label.insets = new Insets(0, 0, 0, 5);
+		gbc_label.insets = new Insets(0, 0, 0, 0);
 		gbc_label.gridx = 0;
 		gbc_label.gridy = 1;
 		panel_1.add(lblObjectiveTemp, gbc_label);
