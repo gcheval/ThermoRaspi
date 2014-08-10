@@ -24,6 +24,7 @@ import java.awt.event.ActionListener;
 import javax.swing.SwingConstants;
 
 public class ThermoWindow extends JFrame {
+	private static final long serialVersionUID = 1L;
 	private JLabel lblCurrentTemp = new JLabel("20")
 	,lblRelativeHumidity = new JLabel("00%")
 	,lblObjectiveTemp = new JLabel("20");
@@ -33,6 +34,7 @@ public class ThermoWindow extends JFrame {
 	 * Launch the application.
 	 */
 	public ThermoWindow(){
+		Controller controller = new Controller();
 		setAlwaysOnTop(true);
 		initWindow();
 	}
@@ -101,7 +103,7 @@ public class ThermoWindow extends JFrame {
 		panelControls.add(btnNewButton, gbc_btnNewButton);
 
 		JLabel lblRelativeHumidityTitle = new JLabel("Relative Humidity");
-		lblRelativeHumidityTitle.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		lblRelativeHumidityTitle.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
 		GridBagConstraints gbc_lblRelativeHumidityTitle = new GridBagConstraints();
 		gbc_lblRelativeHumidityTitle.insets = new Insets(0, 0, 5, 0);
 		gbc_lblRelativeHumidityTitle.gridx = 0;
@@ -109,7 +111,7 @@ public class ThermoWindow extends JFrame {
 		panelControls.add(lblRelativeHumidityTitle, gbc_lblRelativeHumidityTitle);
 
 
-		lblRelativeHumidity.setFont(new Font("Lucida Grande", Font.PLAIN, 40));
+		lblRelativeHumidity.setFont(new Font("Helvetica Neue", Font.PLAIN, 40));
 		GridBagConstraints gbc_lblRelativeHumidity = new GridBagConstraints();
 		gbc_lblRelativeHumidity.gridx = 0;
 		gbc_lblRelativeHumidity.gridy = 2;
@@ -142,7 +144,7 @@ public class ThermoWindow extends JFrame {
 		GridBagConstraints gbc_button = new GridBagConstraints();
 		gbc_button.ipady = 50;
 		gbc_button.fill = GridBagConstraints.HORIZONTAL;
-		gbc_button.insets = new Insets(0, 0, 5, 0);
+		gbc_button.insets = new Insets(0, 0, 50, 0);
 		gbc_button.gridx = 0;
 		gbc_button.gridy = 0;
 		panelTempChange.add(button, gbc_button);
