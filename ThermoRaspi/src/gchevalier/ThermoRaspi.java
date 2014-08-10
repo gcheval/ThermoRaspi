@@ -25,6 +25,7 @@ public class ThermoRaspi extends JPanel{
 	JToggleButton onOffButton;
 	JFrame parent;
 	public ThermoRaspi(JFrame parent){
+		super();
 		this.parent = parent;
 		initWindow();
 	}
