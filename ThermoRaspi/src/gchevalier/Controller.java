@@ -16,12 +16,11 @@ import javax.swing.UIManager;
 public class Controller {
 	private JLabel tempLabel,humidLabel;
 	private Timer timer;
-	private int temp = 20;
 
 	public void setCurrentTemp(JLabel tempLabel, JLabel humidLabel){
 		this.tempLabel = tempLabel;
 		this.humidLabel = humidLabel;
-		timer = new Timer(3000, timerAction);
+		timer = new Timer(5000, timerAction);
 		timer.start();
 	}
 	private ActionListener timerAction = new ActionListener()
@@ -29,7 +28,6 @@ public class Controller {
 		public void actionPerformed(ActionEvent ae)
 		{
 			getTempAction(ae);
-			tempLabel.setText("20");
 		}
 	};
 	public void plusButton_Action(ActionEvent evt){
@@ -38,34 +36,27 @@ public class Controller {
 	public void minusButton_Action(ActionEvent evt){
 
 	}
-	
+
 	private void getTempAction(ActionEvent ae){
-	       String s = null;
-	       
-	       try {
-	            
-	    	   
-	           // using the Runtime exec method:
-	           Process p = Runtime.getRuntime().exec("sudo python AdafruitDHT.py 11 4", 
-	        		   null,
-	        		   new File("/home/pi/workspace/Adafruit_Python_DHT/examples/"));
-	           
-	            
-	           BufferedReader stdInput = new BufferedReader(new
-	                InputStreamReader(p.getInputStream()));
+		String s = null;
 
-	           BufferedReader stdError = new BufferedReader(new
-	                InputStreamReader(p.getErrorStream()));
+		try {   
+			Process p = Runtime.getRuntime().exec("sudo python AdafruitDHT.py 11 4", 
+					null,
+					new File("/home/pi/workspace/Adafruit_Python_DHT/examples/"));
+			BufferedReader stdInput = new BufferedReader(new
+					InputStreamReader(p.getInputStream()));
 
-	           // read the output from the command
-	           System.out.println("Here is the standard output of the command:\n");
-	           while ((s = stdInput.readLine()) != null) {
-	        	   tempLabel.setText(s.substring(5, 9));
-	        	   //humidLabel.setText(s.substring(22, 24)+"%");               
-	           }
-	            
-	       }
-	       catch (IOException e) {
-	       }  
+			BufferedReader stdError = new BufferedReader(new
+					InputStreamReader(p.getErrorStream()));
+
+			while ((s = stdInput.readLine()) != null) {
+				tempLabel.setText(s.substring(5, 9));
+				humidLabel.setText(s.substring(22, 24)+"%");               
+			}
+
+		}
+		catch (IOException e) {
+		}  
 	}
 }
