@@ -34,7 +34,6 @@ public class ThermoWindow extends JFrame {
 	 * Launch the application.
 	 */
 	public ThermoWindow(){
-		setResizable(false);
 		setAlwaysOnTop(true);
 		initWindow();
 	}
