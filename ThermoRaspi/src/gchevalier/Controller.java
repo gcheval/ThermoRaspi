@@ -61,7 +61,7 @@ public class Controller {
 	           System.out.println("Here is the standard output of the command:\n");
 	           while ((s = stdInput.readLine()) != null) {
 	        	   tempLabel.setText(s.substring(5, 9));
-	        	   humidLabel.setText(s.substring(22, 24)+"%");               
+	        	   //humidLabel.setText(s.substring(22, 24)+"%");               
 	           }
 	            
 	       }
