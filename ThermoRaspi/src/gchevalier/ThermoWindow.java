@@ -144,7 +144,7 @@ public class ThermoWindow extends JFrame {
 		GridBagConstraints gbc_button = new GridBagConstraints();
 		gbc_button.ipady = 50;
 		gbc_button.fill = GridBagConstraints.HORIZONTAL;
-		gbc_button.insets = new Insets(40, 0, 35, 0);
+		gbc_button.insets = new Insets(40, 0, 30, 0);
 		gbc_button.gridx = 0;
 		gbc_button.gridy = 0;
 		panelTempChange.add(button, gbc_button);
