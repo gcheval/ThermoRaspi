@@ -29,12 +29,12 @@ public class ThermoWindow extends JFrame {
 	,lblRelativeHumidity = new JLabel("00%")
 	,lblObjectiveTemp = new JLabel("20");
 	private JPanel contentPane;
-
+	private Controller controller;
 	/**
 	 * Launch the application.
 	 */
 	public ThermoWindow(){
-		Controller controller = new Controller();
+		controller = new Controller();
 		setAlwaysOnTop(true);
 		initWindow();
 	}
@@ -68,7 +68,7 @@ public class ThermoWindow extends JFrame {
 
 		lblCurrentTemp.setFont(new Font("Helvetica Neue", Font.PLAIN, 350));	//Set to 400
 		panelCurrentTemp.add(lblCurrentTemp);
-
+		controller.setCurrentTemp(lblCurrentTemp, lblRelativeHumidity);
 		JLabel lblNewLabel = new JLabel("<html><sup>°C</sup></html>");
 		lblNewLabel.setFont(new Font("Helvetica Neue", Font.PLAIN, 60));
 		panelCurrentTemp.add(lblNewLabel);
